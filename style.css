@@ -1,0 +1,161 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff3e0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    color: #3f3f3f;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(90deg, #f9c74f, #fbd58a);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #f9a825;
+    box-shadow: 4px 4px 4px #ffffff;
+    transform: scale(1.0);
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes animateBlob {
+    100% {
+        transform: translate(300px, 50px) rotate(-10deg);
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: rgba(255, 255, 255, .25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, .37);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box {
+    position: relative;
+    width: 320px;
+    margin: 30px 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.input-box label {
+    color: #3f3f3f;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #3f3f3f;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #3f3f3f;
+    font-size: 1.2em;
+    line-height: 67px;
+}
+
+.remember-forgot {
+    margin: 25px 25px;
+    font-size: .9em;
+    color: #3f3f3f;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot a {
+    color: #3f3f3f;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.remember-forgot label input {
+    accent-color: #f9c74f;
+    margin-right: 3px;
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+}
+
+.register-link {
+    font-size: .9em;
+    text-align: center;
+    color: #3f3f3f;
+    margin: 25px 0 10px;
+}
+
+.register-link p a {
+    color: #3f3f3f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(255, 220, 51, 0.42) 31.77%, #f9c74f 100%);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    transform: translate(-100px, -50px) rotate(-90deg);
+    transition: 1s cubic-bezier(.07, .8, .16, 1);
+    animation: animateBlob 20s infinite alternate;
+}
+
+.blob:hover {
+    width: 520px;
+    height: 520px;
+    filter: blur(30px);
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, .6),
+                inset 100px 100px 0 0 #f9c74f,
+                inset 200px 200px 0 0 #fbd58a,
+                inset 300px 300px 0 0 #f9a825;
+}
